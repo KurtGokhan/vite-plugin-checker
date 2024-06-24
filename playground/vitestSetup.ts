@@ -8,7 +8,7 @@ import { chromium } from 'playwright-chromium'
 import strip from 'strip-ansi'
 import { createServer, mergeConfig } from 'vite'
 import { beforeAll, expect } from 'vitest'
-import { Checker } from 'vite-plugin-checker/dist/Checker'
+import { Checker } from 'vite-plugin-checker-biome/dist/Checker'
 
 import { normalizeWindowsLogSerializer } from './serializers'
 
