@@ -1,5 +1,11 @@
 # Visit [documentation](https://vite-plugin-checker.netlify.app) for usage
 
+
+> [!IMPORTANT]  
+> This is a fork of the original [vite-plugin-checker](https://github.com/fi3ework/vite-plugin-checker), created temporarily to support Biome.
+> This fork will be removed once [the PR](https://github.com/fi3ework/vite-plugin-checker/pull/316) is merged to the original repository.
+> Until then, you can use `npm install vite-plugin-checker-biome` to install this fork.
+
 A Vite plugin that can run TypeScript, VLS, vue-tsc, ESLint, Biome, Stylelint in worker thread.
 
 <p align="center">

@@ -2,7 +2,7 @@
   "private": true,
   "version": "0.0.0",
   "engines": {
-    "pnpm": "^7.0.0",
+    "pnpm": "^9.0.0",
     "yarn": "forbidden, use pnpm",
     "npm": "forbidden, use pnpm"
   },
@@ -25,7 +25,7 @@
       }
     }
   },
-  "packageManager": "pnpm@7.5.0",
+  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "dev": "pnpm -r --filter=./packages/** --parallel run dev",
@@ -34,7 +34,7 @@
     "clean": "pnpm -r --filter=./packages/** run clean",
     "format": "prettier --check \"packages/*/src/**/*.{ts,js,vue}\"",
     "lint": "eslint \"packages/*/src/**/*.{ts,js}\"",
-    "publint": "pnpm -r --filter='vite-plugin-checker' exec publint",
+    "publint": "pnpm -r --filter='vite-plugin-checker-biome' exec publint",
     "test": "run-s test-unit test-serve test-build",
     "test-unit": "vitest run",
     "test-serve": "vitest run -c vitest.config.e2e.ts",
@@ -42,7 +42,7 @@
     "test-serve-cjs": "cross-env VITEST_TEST_CJS=1 pnpm run test-serve",
     "test-build-cjs": "cross-env VITEST_TEST_CJS=1 pnpm run test-build",
     "test-unit:watch": "vitest",
-    "type-check": "pnpm -r --parallel --filter \"vite-plugin-checker\" exec tsc --noEmit",
+    "type-check": "pnpm -r --parallel --filter \"vite-plugin-checker-biome\" exec tsc --noEmit",
     "docs:dev": "pnpm --filter docs exec vitepress dev .",
     "docs:build": "pnpm --filter docs exec vitepress build .",
     "docs:serve": "pnpm --filter docs exec vitepress serve .",
@@ -100,7 +100,7 @@
     "tiny-invariant": "^1.1.0",
     "typescript": "^5.0.4",
     "vite": "^4.3.0",
-    "vite-plugin-checker": "workspace:*",
+    "vite-plugin-checker-biome": "workspace:*",
     "vitest": "^0.30.1",
     "ws": "^8.5.0"
   }
